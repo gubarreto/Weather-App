@@ -15,6 +15,9 @@
 		ECB00EEB2C6C51C5004E236B /* Weather_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00EEA2C6C51C5004E236B /* Weather_AppTests.swift */; };
 		ECB00EF52C6C51C5004E236B /* Weather_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00EF42C6C51C5004E236B /* Weather_AppUITests.swift */; };
 		ECB00EF72C6C51C5004E236B /* Weather_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00EF62C6C51C5004E236B /* Weather_AppUITestsLaunchTests.swift */; };
+		ECB00F042C6C569B004E236B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00F032C6C569B004E236B /* HomeView.swift */; };
+		ECB00F082C6C577F004E236B /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00F072C6C577F004E236B /* Color+.swift */; };
+		ECB00F0B2C6C5DD6004E236B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00F0A2C6C5DD6004E236B /* CustomTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		ECB00EF02C6C51C5004E236B /* Weather AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB00EF42C6C51C5004E236B /* Weather_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_AppUITests.swift; sourceTree = "<group>"; };
 		ECB00EF62C6C51C5004E236B /* Weather_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECB00F032C6C569B004E236B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		ECB00F072C6C577F004E236B /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		ECB00F0A2C6C5DD6004E236B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +102,9 @@
 		ECB00ED62C6C51C4004E236B /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				ECB00F062C6C574E004E236B /* Extensions */,
+				ECB00F052C6C56E5004E236B /* Views */,
 				ECB00ED72C6C51C4004E236B /* Weather_AppApp.swift */,
-				ECB00ED92C6C51C4004E236B /* ContentView.swift */,
 				ECB00EDB2C6C51C4004E236B /* Item.swift */,
 				ECB00EDD2C6C51C4004E236B /* Assets.xcassets */,
 				ECB00EDF2C6C51C4004E236B /* Preview Content */,
@@ -128,6 +135,32 @@
 				ECB00EF62C6C51C5004E236B /* Weather_AppUITestsLaunchTests.swift */,
 			);
 			path = "Weather AppUITests";
+			sourceTree = "<group>";
+		};
+		ECB00F052C6C56E5004E236B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECB00F092C6C5DBE004E236B /* Components */,
+				ECB00ED92C6C51C4004E236B /* ContentView.swift */,
+				ECB00F032C6C569B004E236B /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECB00F062C6C574E004E236B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ECB00F072C6C577F004E236B /* Color+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ECB00F092C6C5DBE004E236B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ECB00F0A2C6C5DD6004E236B /* CustomTabBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB00EDA2C6C51C4004E236B /* ContentView.swift in Sources */,
+				ECB00F082C6C577F004E236B /* Color+.swift in Sources */,
+				ECB00F042C6C569B004E236B /* HomeView.swift in Sources */,
 				ECB00EDC2C6C51C4004E236B /* Item.swift in Sources */,
+				ECB00F0B2C6C5DD6004E236B /* CustomTabBar.swift in Sources */,
 				ECB00ED82C6C51C4004E236B /* Weather_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
