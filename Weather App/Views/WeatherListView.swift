@@ -9,7 +9,21 @@ import SwiftUI
 
 struct WeatherListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            
+            Color.background
+                .ignoresSafeArea()
+            
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 20) {
+                    ForEach(forecasts) { forecast in
+                        WeatherView(forecast: forecast)
+                            .padding(.horizontal)
+                            .padding(.vertical, 8)
+                    }
+                }
+            }
+        }
     }
 }
 

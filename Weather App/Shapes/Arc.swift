@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct Arc: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct Arc: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: .init(x: rect.minX - 1, y: rect.minY))
+        path.addQuadCurve(to: CGPoint(x: rect.maxX + 1, y: rect.minY), control: CGPoint(x: rect.midX, y: rect.midY))
+        path.addLine(to: .init(x: rect.maxX + 1, y: rect.maxY + 1))
+        path.addLine(to: .init(x: rect.minX - 1, y: rect.maxY + 1))
+        path.closeSubpath()
+        return path
     }
-}
-
-#Preview {
-    Arc()
 }
