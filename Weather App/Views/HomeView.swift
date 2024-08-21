@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var viewModel: ForecastViewModel = ForecastViewModel()
+    @State private var cityName: String = "Montreal"
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -23,7 +27,7 @@ struct HomeView: View {
                     .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
                 
                 VStack(spacing: -8) {
-                    Text("Montreal")
+                    Text(cityName)
                         .font(.largeTitle)
                     
                     Text("19º")
@@ -50,6 +54,9 @@ struct HomeView: View {
                 CustomTabBar()
             }
             .navigationBarHidden(true)
+        }
+        .onAppear {
+            viewModel.getForecast(for: cityName)
         }
     }
 }

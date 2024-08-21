@@ -5,7 +5,7 @@
 //  Created by Gustavo Barreto on 17/08/24.
 //
 
-enum Weather: String, Codable {
+/*enum Weather: String, Codable {
     case clear = "Clear"
     case cloudy = "Cloudy"
     case rainly = "Mid Rain"
@@ -62,3 +62,4 @@ enum Weather: String, Codable {
         }
     }
 }
+*/

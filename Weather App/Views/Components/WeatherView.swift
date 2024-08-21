@@ -21,17 +21,17 @@ struct WeatherView: View {
             
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("\(forecast.currentTemperature)º")
+                    Text("\(forecast.main.temp)º")
                         .font(.system(size: 72, weight: .regular))
                         .padding(.bottom, 30)
                     
                     HStack(spacing: 12) {
-                        Text("H:\(forecast.highTemperature)º")
-                        Text("L:\(forecast.lowTemperature)º")
+                        Text("H:\(forecast.main.tempMax)º")
+                        Text("L:\(forecast.main.tempMin)º")
                     }
                     .foregroundStyle(.secondary)
                     
-                    Text("\(forecast.location)")
+                    Text("\(forecast.name)")
                         .font(.title3)
                         .lineLimit(1)
                 }
@@ -39,12 +39,12 @@ struct WeatherView: View {
                 Spacer()
                 
                 VStack(alignment: .trailing, spacing: 0) {
-                    Image("\(forecast.weather.icon)")
-                        .resizable()
-                        .scaledToFit()
-                        .offset(y: -10)
+//                    Image("\(forecast.)")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .offset(y: -10)
                     
-                    Text("\(forecast.weather.description)")
+                    Text("\(forecast.weather[0].main)")
                         .padding(.trailing)
                 }
             }
@@ -52,8 +52,4 @@ struct WeatherView: View {
         }
         .frame(width: .infinity, height: 220, alignment: .bottom)
     }
-}
-
-#Preview {
-    WeatherView(forecast: forecasts[0])
 }

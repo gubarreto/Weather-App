@@ -21,7 +21,7 @@ protocol ForecastWebServiceProtocol {
 class ForecastWebService: ForecastWebServiceProtocol {
     
     private let baseUrl: String = "https://api.openweathermap.org/data/2.5/weather"
-    private let apiKey: String? = ProcessInfo.processInfo.environment["apiKey"]
+    private let apiKey: String? = ProcessInfo.processInfo.environment["apiKey"]?.trimmingCharacters(in: .whitespacesAndNewlines)
     
     func fetchForecast(for city: String) -> AnyPublisher<Forecast, ForecastWebServiceError> {
         guard var urlComponents = URLComponents(string: baseUrl) else {

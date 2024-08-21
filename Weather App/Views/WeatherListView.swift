@@ -16,11 +16,11 @@ struct WeatherListView: View {
             
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
-                    ForEach(forecasts) { forecast in
-                        WeatherView(forecast: forecast)
-                            .padding(.horizontal)
-                            .padding(.vertical, 8)
-                    }
+//                    ForEach(forecasts) { forecast in
+//                        WeatherView(forecast: forecast)
+//                            .padding(.horizontal)
+//                            .padding(.vertical, 8)
+//                    }
                 }
             }
         }
