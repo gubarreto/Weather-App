@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		EC2C555C2C6CC8CB0056DE01 /* WeatherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C555B2C6CC8CB0056DE01 /* WeatherListView.swift */; };
 		EC2C555F2C6CC9DE0056DE01 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C555E2C6CC9DE0056DE01 /* Arc.swift */; };
+		EC2D60D22C7D5B2F00219C46 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D60D12C7D5B2F00219C46 /* SegmentedControl.swift */; };
+		EC2E11762C7E9FD8003BF1FC /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E11752C7E9FD8003BF1FC /* View+.swift */; };
 		EC34A1C62C70EB31003ADB4F /* Trapezoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34A1C52C70EB31003ADB4F /* Trapezoid.swift */; };
 		EC34A1C82C70F515003ADB4F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34A1C72C70F515003ADB4F /* Weather.swift */; };
 		EC34A1CB2C711BCA003ADB4F /* ForecastWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34A1CA2C711BCA003ADB4F /* ForecastWebService.swift */; };
 		EC34A1CE2C712C0D003ADB4F /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC34A1CD2C712C0D003ADB4F /* ForecastViewModel.swift */; };
 		EC4C3A952C6D5D9B00D94445 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C3A942C6D5D9B00D94445 /* Forecast.swift */; };
 		EC4C3A972C6D624000D94445 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C3A962C6D624000D94445 /* WeatherView.swift */; };
+		EC5C7B462C7604250031BBE7 /* ForecastBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5C7B452C7604250031BBE7 /* ForecastBottomSheetView.swift */; };
+		EC5C7B492C7605C50031BBE7 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = EC5C7B482C7605C50031BBE7 /* BottomSheet */; };
+		EC6660212C7E2EF30028D900 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6660202C7E2EF30028D900 /* Blur.swift */; };
 		ECB00ED82C6C51C4004E236B /* Weather_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00ED72C6C51C4004E236B /* Weather_AppApp.swift */; };
 		ECB00EDA2C6C51C4004E236B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00ED92C6C51C4004E236B /* ContentView.swift */; };
 		ECB00EDC2C6C51C4004E236B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB00EDB2C6C51C4004E236B /* Item.swift */; };
@@ -48,12 +53,16 @@
 /* Begin PBXFileReference section */
 		EC2C555B2C6CC8CB0056DE01 /* WeatherListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListView.swift; sourceTree = "<group>"; };
 		EC2C555E2C6CC9DE0056DE01 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
+		EC2D60D12C7D5B2F00219C46 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		EC2E11752C7E9FD8003BF1FC /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		EC34A1C52C70EB31003ADB4F /* Trapezoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapezoid.swift; sourceTree = "<group>"; };
 		EC34A1C72C70F515003ADB4F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		EC34A1CA2C711BCA003ADB4F /* ForecastWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWebService.swift; sourceTree = "<group>"; };
 		EC34A1CD2C712C0D003ADB4F /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 		EC4C3A942C6D5D9B00D94445 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		EC4C3A962C6D624000D94445 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		EC5C7B452C7604250031BBE7 /* ForecastBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastBottomSheetView.swift; sourceTree = "<group>"; };
+		EC6660202C7E2EF30028D900 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		ECB00ED42C6C51C4004E236B /* Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB00ED72C6C51C4004E236B /* Weather_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_AppApp.swift; sourceTree = "<group>"; };
 		ECB00ED92C6C51C4004E236B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5C7B492C7605C50031BBE7 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				ECB00F072C6C577F004E236B /* Color+.swift */,
+				EC2E11752C7E9FD8003BF1FC /* View+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,6 +226,9 @@
 			children = (
 				ECB00F0A2C6C5DD6004E236B /* CustomTabBar.swift */,
 				EC4C3A962C6D624000D94445 /* WeatherView.swift */,
+				EC5C7B452C7604250031BBE7 /* ForecastBottomSheetView.swift */,
+				EC2D60D12C7D5B2F00219C46 /* SegmentedControl.swift */,
+				EC6660202C7E2EF30028D900 /* Blur.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -235,6 +249,9 @@
 			dependencies = (
 			);
 			name = "Weather App";
+			packageProductDependencies = (
+				EC5C7B482C7605C50031BBE7 /* BottomSheet */,
+			);
 			productName = "Weather App";
 			productReference = ECB00ED42C6C51C4004E236B /* Weather App.app */;
 			productType = "com.apple.product-type.application";
@@ -307,6 +324,9 @@
 				Base,
 			);
 			mainGroup = ECB00ECB2C6C51C4004E236B;
+			packageReferences = (
+				EC5C7B472C7605C50031BBE7 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = ECB00ED52C6C51C4004E236B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -353,7 +373,10 @@
 				ECB00EDA2C6C51C4004E236B /* ContentView.swift in Sources */,
 				ECB00F082C6C577F004E236B /* Color+.swift in Sources */,
 				EC34A1CE2C712C0D003ADB4F /* ForecastViewModel.swift in Sources */,
+				EC2E11762C7E9FD8003BF1FC /* View+.swift in Sources */,
+				EC5C7B462C7604250031BBE7 /* ForecastBottomSheetView.swift in Sources */,
 				EC2C555F2C6CC9DE0056DE01 /* Arc.swift in Sources */,
+				EC6660212C7E2EF30028D900 /* Blur.swift in Sources */,
 				ECB00F042C6C569B004E236B /* HomeView.swift in Sources */,
 				EC34A1C82C70F515003ADB4F /* Weather.swift in Sources */,
 				EC4C3A952C6D5D9B00D94445 /* Forecast.swift in Sources */,
@@ -362,6 +385,7 @@
 				ECB00EDC2C6C51C4004E236B /* Item.swift in Sources */,
 				ECB00F0B2C6C5DD6004E236B /* CustomTabBar.swift in Sources */,
 				EC2C555C2C6CC8CB0056DE01 /* WeatherListView.swift in Sources */,
+				EC2D60D22C7D5B2F00219C46 /* SegmentedControl.swift in Sources */,
 				ECB00ED82C6C51C4004E236B /* Weather_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,6 +712,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC5C7B472C7605C50031BBE7 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Wouter125/BottomSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC5C7B482C7605C50031BBE7 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC5C7B472C7605C50031BBE7 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECB00ECC2C6C51C4004E236B /* Project object */;
 }

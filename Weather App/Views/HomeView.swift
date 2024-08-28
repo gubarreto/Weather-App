@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import BottomSheet
 
 struct HomeView: View {
     
     @StateObject var viewModel: ForecastViewModel = ForecastViewModel()
-    @State private var cityName: String = "Montreal"
+    @State private var cityName: String = "Bauru"
+    @State var bottomSheetIsPresented = true
+    @State var selectedDetent: BottomSheet.PresentationDetent = .medium
     
     var body: some View {
         NavigationStack {
@@ -24,13 +27,14 @@ struct HomeView: View {
                     .ignoresSafeArea()
                 
                 Image(.house)
-                    .frame(maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
+                    .frame(maxHeight: .infinity, alignment: .center)
+                    .offset(y: 26)
                 
                 VStack(spacing: -8) {
-                    Text(cityName)
+                    Text(viewModel.forecast?.name ?? cityName)
                         .font(.largeTitle)
                     
-                    Text("19º")
+                    Text("\(viewModel.formattedCurrentTemperature)º")
                         .font(.system(size: 96, weight: .thin))
                     
                     Text("Mostly Clear")
@@ -39,17 +43,24 @@ struct HomeView: View {
                         .foregroundStyle(.secondary)
                     
                     HStack {
-                        Text("H:24º")
-                        Text("L:18º")
+                        Text("H:\(viewModel.formattedHighTemperature)º")
+                        Text("L:\(viewModel.formattedLowTemperature)º")
                     }
                     .font(.title3)
                     .fontWeight(.semibold)
                     .padding(.top, 8)
+//                    .shadow(color: )
                     
                     Spacer()
                 }
                 .foregroundStyle(.white)
-                .padding(.top, 32)
+                .padding(.top)
+                
+                .sheetPlus(isPresented: $bottomSheetIsPresented,
+                           background: Color.clear, main: {
+                    ForecastBottomSheetView()
+                        .presentationDetentsPlus([.height(244), .medium, .height(600)], selection: $selectedDetent)
+                })
                 
                 CustomTabBar()
             }
