@@ -21,18 +21,22 @@ struct WeatherView: View {
             
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("\(forecast.main.temp)º")
+//                    Text("\(forecast.main.temp)º")
+                    Text("\(forecast.currentTemperature)º")
                         .font(.system(size: 72, weight: .regular))
                         .padding(.bottom, 30)
                     
                     HStack(spacing: 12) {
-                        Text("H:\(forecast.main.tempMax)º")
-                        Text("L:\(forecast.main.tempMin)º")
+                        //Text("H:\(forecast.main.tempMax)º")
+                        //Text("L:\(forecast.main.tempMin)º")
+                        Text("\(forecast.highTemperature)º")
+                        Text("\(forecast.lowTemperature)º")
                     }
                     .foregroundStyle(.secondary)
                     
-                    Text("\(forecast.name)")
-                        .font(.title3)
+                    //Text("\(forecast.name)")
+                    Text("\(forecast.location)")
+                        .font(.body)
                         .lineLimit(1)
                 }
                 
@@ -44,7 +48,8 @@ struct WeatherView: View {
 //                        .scaledToFit()
 //                        .offset(y: -10)
                     
-                    Text("\(forecast.weather[0].main)")
+                    //Text("\(forecast.weather[0].main)")
+                    Text("\(forecast.weather.description)")
                         .padding(.trailing)
                 }
             }

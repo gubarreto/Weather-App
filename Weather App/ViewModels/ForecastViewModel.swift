@@ -21,15 +21,18 @@ class ForecastViewModel: ObservableObject {
     }
     
     var formattedCurrentTemperature: String {
-        return formatTemperature(forecast?.main.temp)
+        //return formatTemperature(forecast?.main.temp)
+        return formatTemperature(forecast?.currentTemperature)
     }
     
     var formattedHighTemperature: String {
-        return formatTemperature(forecast?.main.tempMax)
+        //return formatTemperature(forecast?.main.tempMax)
+        return formatTemperature(forecast?.highTemperature)
     }
     
     var formattedLowTemperature: String {
-        return formatTemperature(forecast?.main.tempMin)
+        //return formatTemperature(forecast?.main.tempMin)
+        return formatTemperature(forecast?.lowTemperature)
     }
     
     func getForecast(for city: String) {

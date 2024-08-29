@@ -15,6 +15,8 @@ struct HomeView: View {
     @State var bottomSheetIsPresented = true
     @State var selectedDetent: BottomSheet.PresentationDetent = .medium
     
+    let forecast: Forecast
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -28,28 +30,32 @@ struct HomeView: View {
                 
                 Image(.house)
                     .frame(maxHeight: .infinity, alignment: .center)
-                    .offset(y: 26)
+                    .offset(y: 36)
                 
-                VStack(spacing: -8) {
-                    Text(viewModel.forecast?.name ?? cityName)
+                VStack(spacing: -4) {
+                    //Text(viewModel.forecast?.name ?? cityName)
+                    Text(forecast.location)
                         .font(.largeTitle)
                     
-                    Text("\(viewModel.formattedCurrentTemperature)º")
+                    //Text("\(viewModel.formattedCurrentTemperature)º")
+                    Text("\(forecast.currentTemperature)º")
                         .font(.system(size: 96, weight: .thin))
                     
-                    Text("Mostly Clear")
+                    //Text(viewModel.forecast?.weather[0].description ?? "Not found")
+                    Text(forecast.weather.description)
                         .font(.title3)
                         .fontWeight(.semibold)
                         .foregroundStyle(.secondary)
                     
                     HStack {
-                        Text("H:\(viewModel.formattedHighTemperature)º")
-                        Text("L:\(viewModel.formattedLowTemperature)º")
+                        Text("\(forecast.highTemperature)º")
+                        Text("\(forecast.lowTemperature)º")
+                        //Text("H:\(viewModel.formattedHighTemperature)º")
+                        //Text("L:\(viewModel.formattedLowTemperature)º")
                     }
                     .font(.title3)
                     .fontWeight(.semibold)
                     .padding(.top, 8)
-//                    .shadow(color: )
                     
                     Spacer()
                 }
@@ -73,6 +79,6 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(forecast: hourlyForecasts[0])
         .preferredColorScheme(.dark)
 }

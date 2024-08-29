@@ -22,13 +22,16 @@ struct ForecastBottomSheetView: View {
         .backgroundBlur(radius: 25, opaque: true)
         .background(Color.bottomSheetBackground)
         .clipShape(RoundedRectangle(cornerRadius: 44))
-        /*.overlay(
-            Divider()
+        .overlay(
+            RoundedRectangle(cornerRadius: 44)
+                .stroke(.white, lineWidth: 1.0)
                 .blendMode(.overlay)
-                .background(Color.bottomSheetBorderTop)
-                .frame(maxHeight: .infinity, alignment: .top)
-                .clipShape(RoundedRectangle(cornerRadius: 44))
-        )*/
+                .offset(y: 1)
+                .blur(radius: 0)
+                .mask {
+                    RoundedRectangle(cornerRadius: 44)
+                }
+        )
         .overlay(
             RoundedRectangle(cornerRadius: 12)
                 .fill(.black.opacity(0.3))

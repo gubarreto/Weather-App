@@ -10,7 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     var body: some View {
-        HomeView()
+        HomeView(forecast: hourlyForecasts[0])
     }
 }
 
